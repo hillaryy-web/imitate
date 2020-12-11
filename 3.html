@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                box-sizing: border-box;
+    
+            }
+            .body{
+                overflow-x: hidden;
+                overflow-y: hidden;
+                position: relative;
+            }
+            .split {
+                height: 100%;
+                width: 50%;
+                position: fixed;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                padding-top: 20px;
+                overflow: visible;
+                z-index: 1;
+            
+    
+    
+            
+            }
+            .left {
+                left: 0;
+                background-color:#44AA95;
+    
+            }   
+
+            .right {
+            background-color:white;
+            position: relative;;
+            overflow-y: hidden;
+            margin-left:695px;
+            overflow-x: hidden;
+            z-index:0;
+            position:fixed;
+    
+            }
+
+            .forleft li {
+             list-style-type:none;
+             float: right;
+             padding-right:30px;
+             margin-top: 8px;
+
+            }
+            .forleft {
+                display: inline;
+                float:right;
+                position: relative;
+                font-family: 'Mulish', sans-serif;
+                font-style: bold;
+                font-size: 12px;
+                font-weight: bold;
+        
+            }
+            .forright li {
+                margin-top: 10px;
+                padding: 50px;
+                padding-left: 15px;
+                list-style-type: none;
+                display: inline;
+                overflow-x: hidden;
+        
+        
+            }
+            .button {
+                display: inline;
+                
+            }
+            .buttwo {
+                margin-left: -50px;
+                padding:7px;
+                border:1px solid #44AA95;
+                color: #44AA95;
+                font-weight: 700;
+                font-family: 'Mulish', sans-serif;
+            }
+            .butone{
+                padding: 7px;
+                background-color: #44AA95;
+                border:1px solid #44AA95;
+                color: white;
+                font-weight: 700;
+                font-family: 'Mulish', sans-serif;
+            }
+            button:hover {
+                background-color: green;
+            }
+            .forright {
+                float: left;
+                margin-top:1px;
+                padding-left: 15px;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                font-family: 'Mulish', sans-serif;
+                font-style: bold;
+                font-size:12px;
+                font-weight:bold;
+
+            }
+            img {
+                position:absolute;
+                padding-left: 200px;
+                overflow:visible;
+                left:9px ;
+                top: 80px;
+                
+            }
+            .row {
+                position: relative;
+                overflow-x: hidden;
+            }
+            .fortexts {
+                margin-top: 150px;
+                margin-left: 50px;
+                color: white;
+                font-family: 'Montaga', serif;
+            }
+            form {
+                border:solid white;       
+                margin-top:150px;
+                margin-left: 150px;
+                width: 399px;
+                height:330px;
+                padding-top:45px;
+                padding-left: 52px;
+                box-shadow: 0px 24px 64px rgba(0,0,0,0.05);
+                color:rgba(225,225,225,1);
+                font-weight:100;
+                
+    
+            
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="row">
+        
+            <div class="split left">
+                <ul class="forleft">
+                    <li>Home</li>
+                </ul>
+                <div>
+                    <img class="full-width" src="images/shoe.png">
+                </div>
+                <div class="fortexts">
+                    <h1 style=" font-size: 65px;">Kick-Ass <br>Sports</h1>
+                    <P>Buy Awesome Shoes</P>
+                </div>
+            </div>
+            
+            <div class="split right">
+                <ul class="forright">
+                    <li>Products</li>
+                    <li>Scores</li>
+                    <li>About</li>
+                    <div class="button">
+                    <li><button class="butone" style="width: 110px; border-radius: 71.05px;">Login</button></li>
+                    <li><button class="buttwo" style="width: 110px; border-radius: 71.05px;">Sign up</button></li> 
+                    </div>
+                </ul>
+
+                <form>
+                    <div class="form-group">
+                        <label  for="exampleInputEmail1">Email address</label>
+                        <input style="width:290px; border-radius: 7px;" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input style="width:294px; border-radius: 7px;" type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                    </div>
+                    <button style="width:295px; border-radius: 7px; background-color:#FE9C08;" type="submit" class="btn btn-primary">Login</button>
+                </form>
+               
+               
+            </div>
+            
+            
+        </div> 
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script text="text/javascript" src="index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>

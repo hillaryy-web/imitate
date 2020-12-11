@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+
+        <style>
+           *{
+               box-sizing: border-box;
+               overflow-x: hidden;
+           }
+
+            .ball {
+                background-color:#FFFFFF;
+                width:29px;
+                margin-top:30px;
+                position:absolute;
+                float: left;
+
+            }
+            
+            ul li {
+                padding-left:40px;
+                vertical-align: middle;
+                
+            }
+            ul {
+                margin-left: 90px;
+            }
+            li .butone {
+                margin-top:5px;
+                font-family: 'Mulish', sans-serif;
+                background-color: #44AA95;
+                border:2px solid #44AA95;
+                text-align: center;
+                height:35px;
+                font-weight:540;
+                color: #FFFFFF;
+            }
+            li .buttwo {
+                margin-top: 5px;
+                margin-left:-27px;
+                font-family: 'Mulish', sans-serif;
+                border:2px solid #44AA95;
+                color: #44AA95;
+                background-color: white;
+                text-align: center;
+                height: 35px;
+                font-weight:540;
+            }
+            nav {
+                background-color: white;
+            }
+            #navbarResponsive {
+                color: black;
+            }
+            .nav-item .nav-link {
+                color:black;
+                vertical-align: middle;
+                font-style: bold;
+                font-size:12px;
+                font-weight:800;
+                margin-top:9px;
+                font-family: 'Mulish', sans-serif;
+                
+
+            
+
+            }      
+            .button {
+                text-align: center;
+            } 
+            .card  {
+                margin-top: 70px;
+                margin-left:70px;
+                height:450px;
+                border-radius:16px;
+                border: whitesmoke;
+                position: relative;
+                display: inline-block;
+                z-index: 0;
+                overflow-y: hidden;
+                
+                
+                
+               
+            } 
+            .cardone {
+                
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                
+                
+
+            }
+            
+            .cardtwo {
+                transform: translateZ(0);
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                
+            }
+            .cardthree {
+                transform: translateZ(0);
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                
+            }
+            .white{
+                margin-top:-340px;
+                position:relative;
+                margin-left:56px;
+
+                
+                
+            }  
+            img {
+                position: relative;
+            }
+            .vector {
+                position:absolute;
+                margin-top:-180px;
+                margin-left:252px;
+                z-index: 1;
+                
+            }
+            h5{
+                overflow-y:hidden;
+                z-index: 1;
+                padding-bottom:10px;
+                padding-top:-1px;
+                margin-top:-20px;
+                font-family: 'DM Serif Display', serif;
+                font-size:24px;
+                font-weight:500;
+
+            }
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            .card-text {
+                font-size:14px;
+                margin-top:-10px;
+                font-family: 'Open Sans', sans-serif;
+                color: #6E798C;
+                line-height: 25px;
+            }
+            .date .dates {
+                display:inline-block;
+                margin-top:30px;
+            }
+            .dates {
+                
+                text-align:center;
+            }
+            .one {
+                padding-left:0px;
+                font-family: 'Open Sans', sans-serif;
+                font-size:14px;
+                color: #6E798C;
+
+            }
+            .two {
+                margin-left:30px;
+                font-family: 'Open Sans', sans-serif;
+                font-size:14px;
+                color: #6E798C;
+
+
+            }
+            .three {
+                margin-left:59px;
+                font-family: 'Open Sans', sans-serif;
+                font-size:14px;
+                color: #6E798C;
+
+
+            }
+            .order .orders {
+                display: inline-block;
+                
+                
+            }
+            .price1 {
+                padding-left: 0px;
+                margin-top:15px;
+                font-size:22px;
+                font-weight: bolder;
+                font-family: 'DM Serif Display', serif;
+            }
+            .price2 {
+                padding-left:5px;
+                padding-top:0px;
+                font-size:15px;
+                font-family:'DM Serif Display', serif; 
+            }
+            .price2 {
+                margin-bottom:20px;
+            }
+
+            .btn {
+                
+                width:100px;
+                height:40px;
+                margin-left:30px;
+                margin-top:10px;
+                text-align: center;
+                position: absolute;
+                border-radius: 4px;
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: 0.15em;
+                font-size:14px;
+                background-color:#44AA95;
+                border:#44AA95;
+                line-height: 25px;
+                
+            }
+            .yellow {
+                position:absolute;
+                margin-top:-116px;
+                margin-left:40px;
+                fill:rgba(255, 194, 43, 1);
+            
+            }
+            
+            
+    
+            
+            
+
+        
+
+        </style>
+    </head>
+
+    <body>
+
+        
+
+        <nav class="navbar navbar-expand-lg  static-top">
+            <div class="container navs">
+                <a class="navbar-brand" href="#">
+                    <img src="images/ball.png" alt="images" width="25px" height="25px">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="3.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  class="nav-link" href="#">Scores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a  class="nav-link" href="#">About</a>
+                        </li>
+                    
+                            <li class="nav-item"><button class="butone " style="width: 110px; border-radius: 71.05px;">Login</button></li>
+                            <li class="nav-item"><button class="buttwo" style="width: 110px; border-radius: 71.05px;">Sign up</button></li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card cardone " style="width:18rem;">
+                        <img class="card-img-top" src="images/jersey1.png" alt="Card image cap">
+                        <svg class="white" height="140" width="500">
+                            <ellipse cx="200" cy="80" rx="13" ry="13" style="fill:white;" />
+                        </svg>
+                        <img class="vector" src="images/Vector.svg">
+                        <div class="card-body">
+                            <h5 class="card-title">Jersey No 5</h5>
+                            <svg class="yellow" height="140" width="500">
+                                <ellipse cx="200" cy="80" rx="10" ry="10" />
+                            </svg>
+                            <p class="card-text">You could also have this awesome jersey at a discounted price, buy now.
+                            </p>
+                            <div class="date">
+                                <p class="dates one">Date:</p>
+                                <p class="dates two">20/1/2020</p>
+                                <P class="dates three">30PC</P>
+                            </div>
+                            <div class="order">
+                                <p class="orders price1">&#36;23.99</p>
+                                <p style="color: red;" class="orders price2"><strike>&#36;29.90</strike></p>
+                                <a href="#" class="btn btn-primary orders">ORDER</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="card cardtwo" style="width: 18rem;">
+                        <img class="card-img-top" src="images/shoe2.png" alt="Card image cap">
+                        <svg class="white" height="140" width="500">
+                            <ellipse cx="200" cy="80" rx="13" ry="13" style="fill:white;" />
+                        </svg>
+                        <img class="vector" src="images/Vector.svg">
+                        <div class="card-body">
+                            <h5 class="card-title">Training Shoes</h5>
+                            <svg class="yellow" height="140" width="500">
+                                <ellipse cx="200" cy="80" rx="10" ry="10" />
+                            </svg>
+                            <p class="card-text">You could also have this awesome jersey at a discounted price, buy now.</p>
+                            <div class="date">
+                                <p class="dates one">Date:</p>
+                                <p class="dates two">20/1/2020</p>
+                                <P class="dates three">30PC</P>
+                            </div>
+                            <div class="order">
+                                <p class="orders price1">&#36;23.99</p>
+                                <p style="color: red;" class="orders price2"><strike>&#36;29.90</strike></p>
+                                <a href="#" class="btn btn-primary orders">ORDER</a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="card cardthree" style="width: 18rem;">
+                        <img class="card-img-top" src="images/shoe3.png" alt="Card image cap">
+                        <svg class="white" height="140" width="500">
+                            <ellipse cx="200" cy="80" rx="13" ry="13" style="fill:white;" />
+                        </svg>
+                        <img class="vector" src="images/Vector.svg">
+                        <div class="card-body">
+                            <h5 class="card-title">Training Shoes </h5>
+                            <svg class="yellow" height="140" width="500">
+                                <ellipse cx="200" cy="80" rx="10" ry="10" />
+                            </svg>
+                            <p class="card-text">You could also have this awesome jerey at a discounted price, buy now.</p>
+                            <div class="date">
+                                <p class="dates one">Date:</p>
+                                <p class="dates two">20/1/2020</p>
+                                <P class="dates three">30PC</P>
+                            </div>
+                            <div class="order">
+                                <p class="orders price1">&#36;23.90</p>
+                                <p style="color: red;" class="orders price2"><strike>&#36;29.90</strike></p>
+                                <a href="#" class="btn btn-primary orders">ORDER</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card cardone " style="width: 18rem;">
+                        <img class="card-img-top" src="images/jersey1.png" alt="Card image cap">
+                        <svg class="white" height="140" width="500">
+                            <ellipse cx="200" cy="80" rx="13" ry="13" style="fill:white;" />
+                        </svg>
+                        <img class="vector" src="images/Vector.svg">
+                        <div class="card-body">
+                            <h5 class="card-title">Jersey No 5</h5>
+                            <svg class="yellow" height="140" width="500">
+                                <ellipse cx="200" cy="80" rx="10" ry="10" />
+                            </svg>
+                            <p class="card-text">You could also have this awesome jersey at a discounted price, buy now.</p>
+                            <div class="date">
+                                <p class="dates one">Date:</p>
+                                <p class="dates two">20/1/2020</p>
+                                <P class="dates three">30PC</P>
+                            </div>
+                            <div class="order">
+                                <p class="orders price1">&#36;23.99</p>
+                                <p style="color: red;" class="orders price2"><strike>&#36;29.90</strike></p>
+                                <a href="#" class="btn btn-primary orders">ORDER</a>
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div class="card cardtwo" style="width: 18rem;">
+                        <img class="card-img-top" src="images/shoe2.png" alt="Card image cap">
+                        <svg class="white" height="140" width="500">
+                            <ellipse cx="200" cy="80" rx="13" ry="13" style="fill:white;" />
+                        </svg>
+                        <img class="vector" src="images/Vector.svg">
+                        <div class="card-body">
+                            <h5 class="card-title">Training Shoes</h5>
+                            <svg class="yellow" height="140" width="500">
+                                <ellipse cx="200" cy="80" rx="10" ry="10" />
+                            </svg>
+                            <p class="card-text">You could also have this awesome jersey at a discounted price, buy now.</p>
+                            <div class="date">
+                                <p class="dates one">Date:</p>
+                                <p class="dates two">20/1/2020</p>
+                                <P class="dates three">30PC</P>
+                            </div>
+                            <div class="order">
+                                <p class="orders price1">&#36;23.99</p>
+                                <p style="color: red;" class="orders price2"><strike>&#36;29.90</strike></p>
+                                <a href="#" class="btn btn-primary orders">ORDER</a>
+                            </div>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div class="card cardthree" style="width: 18rem;">
+                        <img class="card-img-top" src="images/shoe3.png" alt="Card image cap">
+                        <svg class="white" height="140" width="500">
+                            <ellipse cx="200" cy="80" rx="13" ry="13" style="fill:white;" />
+                        </svg>
+                        <img class="vector" src="images/Vector.svg">
+                        <div class="card-body">
+                            <h5 class="card-title">Training Shoes</h5>
+                            <svg class="yellow" height="140" width="500">
+                                <ellipse cx="200" cy="80" rx="10" ry="10" />
+                            </svg>
+                            <p class="card-text">You could also have this awesome jersey at a discounted price, buy now.</p>
+                            <div class="date">
+                                <p class="dates one">Date:</p>
+                                <p class="dates two">20/1/2020</p>
+                                <P class="dates three">30PC</P>
+                            </div>
+                            <div class="order">
+                                <p class="orders price1">&#36;23.99</p>
+                                <p style="color: red;" class="orders price2"><strike>&#36;29.90</strike></p>
+                                <a href="#" class="btn btn-primary orders">ORDER</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
+    </body>
+</html>
